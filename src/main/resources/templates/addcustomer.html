@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div>
+    <div th:replace="fragments/header::header"></div>
+
+    <div class="content content-page">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+            <a th:href="@{/logout}" class="nav-link">
+                <i data-feather="box"></i> Déconnection
+            </a>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item">Liste des clients</li>
+                        <li class="breadcrumb-item active" aria-current="page">Création de clients</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Formulaire de création de clients</h4>
+            </div>
+        </div>
+        <div class="content-body">
+
+            <div class="card card-body pd-lg-25">
+                <form action="#" th:action="@{/add-customer}" th:object="${customerForm}" enctype="multipart/form-data" method="post">
+                    <div style="margin: auto">
+                        <div class="d-md-flex mg-b-30">
+                            <div class="form-group mg-b-0">
+                                <label>Nom complet du client: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{name}" class="form-control" style="width: 220px; margin-right: 10px" placeholder="Entrer le nom complet du client">
+                                <span style="color: red;width: 210px;padding-left: 10px;" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                            </div>
+                            <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Contact du client: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{phone}" class="form-control" style="width: 220px; margin-right: 10px" placeholder="Entrer le contact du client">
+                                <span style="color: red;width: 210px;padding-left: 10px;" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+                            </div>
+                            <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Email du client: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{email}" class="form-control" style="width: 220px; margin-right: 10px" placeholder="Entrer l'email du client">
+                                <span style="color: red;width: 210px;padding-left: 10px;" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                            </div>
+                        </div>
+                        <div class="d-md-flex mg-b-30">
+                            <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Localisation du client: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{location}" class="form-control" style="width: 220px; margin-right: 10px" placeholder="Entrer la localisation du client">
+                                <div style="color: red;width: 210px;padding-left: 10px;" th:if="${#fields.hasErrors('location')}" th:errors="*{location}"></div>
+                            </div>
+                            <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Image du client: <span class="tx-danger">*</span></label>
+                                <input type="file" th:field="*{fileName}" class="form-control" style="width: 220px; margin-right: 10px">
+                                <div style="color: red;width: 210px;padding-left: 10px;" th:if="${#fields.hasErrors('fileName')}" th:errors="*{fileName}"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark pd-x-20">Enregistré le client</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- End Content -->
+    </div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

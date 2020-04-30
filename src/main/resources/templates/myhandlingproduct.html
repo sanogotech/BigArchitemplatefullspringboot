@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div>
+    <div th:replace="fragments/header::header"></div>
+
+    <div class="content content-page">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item">Liste des produits</li>
+                        <li class="breadcrumb-item active" aria-current="page">Création de produit</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Formulaire de création de produits</h4>
+            </div>
+        </div>
+        <div class="content-body">
+
+            <div class="card card-body pd-lg-25">
+                <form action="#" th:action="@{/add-product-handling}" th:object="${product}" method="post">
+                    <div style="margin: auto">
+                        <div class="d-md-flex mg-b-30">
+                            <div class="form-group mg-b-0">
+                                <label>Numéro du produit: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{numberProduct}" class="form-control" style="width: 320px; margin-right: 10px" placeholder="Entrer le numéro du produit">
+                            </div><!-- form-group -->
+                            <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Libellé du produit: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{name}" class="form-control" style="width: 320px; margin-right: 10px" placeholder="Entrer le libellé du produit">
+                            </div><!-- form-group -->
+                            <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Prix unitaire: <span class="tx-danger">*</span></label>
+                                <input type="text" th:field="*{price}" class="form-control" style="width: 320px" placeholder="Entrer le prix unitaire du produit">
+                            </div><!-- form-group -->
+                        </div><!-- d-flex -->
+                        <div class="d-md-flex mg-b-30">
+                            <div class="form-group mg-b-0">
+                                <label>Description du produit: <span class="tx-danger">*</span></label>
+                                <textarea th:field="*{description}" class="form-control" placeholder="Entrer la description du produit" rows="6" style="width: 1000px"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success pd-x-20">Valider le formulaire</button>
+                        <button type="reset" class="btn btn-dark pd-x-20">Réinitaliser le formulaire</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- End Content -->
+    </div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+language: java
+
+jdk: openjdk8
+
+addons:
+  sonarcloud:
+    organization: "ccathala"
+    token:
+      secure: "cxdccxxxxx"
+sudo: required
+
+services: docker
+
+before_install:
+  - cd docker/dev
+  - docker-compose up -d
+  - docker ps -a
+
+before_script:
+  - cd ../../src
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean verify sonar:sonar -Ptest-business,test-consumer -Dsonar.projectKey=xxxx
+  - cd ../docker/dev
+  - docker-compose stop
+  - docker-compose rm -f
+  - docker-compose up -d
+  - docker ps -a
+  - cd ../../src

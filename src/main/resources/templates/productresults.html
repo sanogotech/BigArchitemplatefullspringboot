@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div>
+    <div th:replace="fragments/header::header"></div>
+
+    <div class="content content-page">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item">Liste des produits</li>
+                        <li class="breadcrumb-item active" aria-current="page">Création de produit</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Formulaire de création de produits</h4>
+            </div>
+        </div>
+        <div class="content-body">
+
+            <div>
+                <div class="alert alert-success" role="alert">
+                    Congratulations, all fields have been completed
+                </div>
+            </div>
+
+        </div>
+        <!-- End Content -->
+    </div>
+</div>
+</body>
+</html>

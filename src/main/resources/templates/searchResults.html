@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div>
+    <div th:replace="fragments/header::header"></div>
+
+    <div class="content content-page">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+        </div>
+        <div class="content-body">
+
+            <div class="component-section no-code" th:each="">
+                <h5 id="section1" class="tx-semibold">Résultat</h5>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Nom du client:</strong>
+                        <span th:text="${result.name}"/>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Contact du client:</strong>
+                        <span th:text="${result.phone}"/>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Email du client:</strong>
+                        <span th:text="${result.email}"/>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Localisation du client:</strong>
+                        <span th:text="${result.location}"/>
+                    </li>
+                </ul>
+            </div>
+
+            <div th:unless="${result}"> Not found </div>
+
+        </div>
+        <!-- End Content -->
+    </div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

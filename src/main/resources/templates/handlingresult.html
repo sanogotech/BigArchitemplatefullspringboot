@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Application de démo gestion des stocks">
+    <meta name="author" content="ThemePixels">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+    <title>Application de démo gestion des stocks</title>
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"-->
+    <link rel="stylesheet" href="css/mycustomstyle.css">
+</head>
+<body>
+<div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div>
+                <a href="" class="sidebar-logo"><span>GestionStocks</span></a>
+                <small class="sidebar-logo-headline">Application de gestion des stocks</small>
+            </div>
+        </div>
+        <div id="dpSidebarBody" class="sidebar-body">
+            <ul class="nav nav-sidebar">
+                <li class="nav-label"><label class="content-label">Menus principales</label></li>
+                <li class="nav-item">
+                    <a th:href="@{/}" class="nav-link">
+                        <i data-feather="box"></i> Liste des produits
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Bloc Menu principale -->
+
+    <div class="content content-page">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item">Liste des produits</li>
+                        <li class="breadcrumb-item active" aria-current="page">Création de produit</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Formulaire de création de produits</h4>
+            </div>
+        </div>
+        <div class="content-body">
+
+            <div class="component-section no-code">
+                <h5 id="section1" class="tx-semibold">Résultat</h5>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Numéro du produit:</strong>
+                        <span th:text="${product.numberProduct}"/>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Libellé du produit:</strong>
+                        <span th:text="${product.name}"/>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Prix du produit:</strong>
+                        <span th:text="${product.price}"/>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Description du produit:</strong>
+                        <span th:text="${product.description}"/>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- End Content -->
+    </div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

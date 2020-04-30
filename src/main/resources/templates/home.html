@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+    <div>
+        <div th:replace="fragments/header::header"></div>
+        <!-- End Bloc Menu principale -->
+
+        <div class="content content-page">
+            <!-- Start Header -->
+            <div class="header">
+                <div class="header-left">
+                    <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                    <div class="header-search">
+                        <i data-feather="search"></i>
+                        <input type="search" class="form-control" placeholder="What are you looking for?">
+                    </div>
+                </div>
+
+                <!--div class="header-right">
+                    <a href="#" class="header-help-link"><i data-feather="help-circle"></i></a>
+                    <div class="dropdown dropdown-notification">
+                        <a href="#" class="dropdown-link new" data-toggle="dropdown"><i data-feather="bell"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-menu-header">
+                                <h6>Notifications</h6>
+                                <a href="#"><i data-feather="more-vertical"></i></a>
+                            </div>
+                            <div class="dropdown-menu-body">
+                                <a href="#" class="dropdown-item">
+                                    <div class="avatar"><span class="avatar-initial rounded-circle text-primary bg-primary-light">s</span></div>
+                                    <div class="dropdown-item-body">
+                                        <p><strong>Socrates Itumay</strong> marked the task as completed.</p>
+                                        <span>5 hours ago</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <div class="avatar"><span class="avatar-initial rounded-circle tx-pink bg-pink-light">r</span></div>
+                                    <div class="dropdown-item-body">
+                                        <p><strong>Reynante Labares</strong> marked the task as incomplete.</p>
+                                        <span>8 hours ago</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <div class="avatar"><span class="avatar-initial rounded-circle tx-success bg-success-light">d</span></div>
+                                    <div class="dropdown-item-body">
+                                        <p><strong>Dyanne Aceron</strong> responded to your comment on this <strong>post</strong>.</p>
+                                        <span>a day ago</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <div class="avatar"><span class="avatar-initial rounded-circle tx-indigo bg-indigo-light">k</span></div>
+                                    <div class="dropdown-item-body">
+                                        <p><strong>Kirby Avendula</strong> marked the task as incomplete.</p>
+                                        <span>2 days ago</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a href="#">View All Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-loggeduser">
+                        <a href="#" class="dropdown-link" data-toggle="dropdown">
+                            <div class="avatar avatar-sm">
+                                <img src="../assets/img/img1.jpg" class="rounded-circle" alt="">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-menu-header">
+                                <div class="media align-items-center">
+                                    <div class="avatar">
+                                        <img src="../assets/img/img1.jpg" class="rounded-circle" alt="">
+                                    </div>
+                                    <div class="media-body mg-l-10">
+                                        <h6>Louise Kate Lumaad</h6>
+                                        <span>Administrator</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-body">
+                                <a href="#" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+                                <a href="#" class="dropdown-item"><i data-feather="edit-2"></i> Edit Profile</a>
+                                <a href="#" class="dropdown-item"><i data-feather="briefcase"></i> Account Settings</a>
+                                <a href="#" class="dropdown-item"><i data-feather="shield"></i> Privacy Settings</a>
+                                <a href="#" class="dropdown-item"><i data-feather="log-out"></i> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div-->
+            </div>
+            <!-- End Header -->
+
+            <!-- Start Content -->
+            <div class="content-header justify-content-between">
+                <div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Liste des produits</li>
+                        </ol>
+                    </nav>
+                    <h4 class="content-title">Liste des produits</h4>
+                </div>
+                <div class="d-none d-sm-flex">
+                    <a  th:href="@{/add-product}" class="btn btn-brand-01 mg-l-5">
+                        <i data-feather="plus" class="svg-14"></i> Ajouter un produit (1)
+                    </a>
+                    <a  th:href="@{/add-product-handling}" class="btn btn-brand-01 mg-l-5">
+                        <i data-feather="plus" class="svg-14"></i> Ajouter un produit (2)
+                    </a>
+                </div>
+            </div>
+            <div class="content-body">
+
+                <div class="component-section" style="margin-top: 0px">
+                    <table id="example1" class="table">
+                        <thead>
+                        <tr>
+                            <th class="wd-15p">Numéro du produit</th>
+                            <th class="wd-20p">Libellé</th>
+                            <th class="wd-15p">Prix unitaire</th>
+                            <th class="wd-35p">Description</th>
+                            <th class="wd-15p">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>#PROD0001</td>
+                            <td>Premier produit</td>
+                            <td>5000</td>
+                            <td>La description du produit numéro 001</td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="link-gray-500" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical svg-16">
+                                            <circle cx="12" cy="12" r="1"></circle>
+                                            <circle cx="12" cy="5" r="1"></circle>
+                                            <circle cx="12" cy="19" r="1"></circle>
+                                        </svg>
+                                    </a>
+                                    <div class="dropdown-menu tx-14">
+                                        <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Options</h6>
+                                        <a class="dropdown-item" href="#">Modifier le produit</a>
+                                        <a class="dropdown-item" href="#">Supprimer le produit</a>
+                                        <a class="dropdown-item" href="#">Détail du produit</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- End Content -->
+        </div>
+    </div>
+</body>
+</html>
