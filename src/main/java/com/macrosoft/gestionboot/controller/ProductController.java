@@ -12,10 +12,5 @@ public class ProductController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @GetMapping("/")
-    public String home(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        log.info("Call home page");
-        return "home";
-    }
+ 
 }
