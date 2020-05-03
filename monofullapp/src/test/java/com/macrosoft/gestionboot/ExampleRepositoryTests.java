@@ -25,6 +25,7 @@ public class ExampleRepositoryTests {
 	@Test
 	public void testExample() throws Exception {
 		
+	
 		/*
 		UserForm user = new UserForm();
 		user.setName("toto");
