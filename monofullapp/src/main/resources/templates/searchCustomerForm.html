@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div  class="container" >
+
+<div  class="row" >
+    <div th:replace="fragments/header::header"></div>
+    
+     <div  class="col-sm-1" >
+          <div class="verticalline"></div>
+        
+        </div>
+
+    <div  class="col-sm-8" >
+
+    <div class="container">
+    
+    	       <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+              <a th:href="@{/logout}" class="nav-link">
+			                <i data-feather="box"></i> Déconnection
+			  </a>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item">Liste des produits</li>
+                        <li class="breadcrumb-item active" aria-current="page">Création de produit</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Formulaire de création de produits</h4>
+            </div>
+        </div>
+        <div class="content-body">
+
+            <form action="#" th:action="@{/search-customer}" method="post">
+                <div style="margin: auto">
+                    <div class="d-md-flex mg-b-30">
+                        <div class="form-group mg-b-0">
+                            <label>Nom complet du client: <span class="tx-danger">*</span></label>
+                            <input type="text" name="name" class="form-control" required style="width: 220px; margin-right: 10px" placeholder="Rechercher un client par nom">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark pd-x-20">Recherche le client</button>
+                </div>
+            </form>
+
+        </div>
+        <!-- End Content -->
+    </div>
+
+ </div>
+</div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

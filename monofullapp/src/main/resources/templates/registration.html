@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+
+<div  class="container" >
+
+<div  class="row" >
+
+    <div th:replace="fragments/header::header"></div>
+    
+     <div  class="col-sm-1" >
+          <div class="verticalline"></div>
+        
+      </div>
+    
+    <div  class="col-sm-8" >
+
+    <div class="container">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+            <a th:href="@{/logout}" class="nav-link">
+                <i data-feather="box"></i> Déconnection
+            </a>
+        </div>
+        <!-- End Header -->
+        
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item">Liste des Users</li>
+                        <li class="breadcrumb-item active" aria-current="page">Création de Users</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Formulaire de création de Users</h4>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form autocomplete="off" action="#" th:action="@{/registration}"
+					th:object="${userform}" method="post" class="form-horizontal"
+					role="form">
+					<h2>Registration Form</h2>
+					<div class="form-group">
+						<div class="col-sm-9">
+						<label th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+								class="validation-message"></label>
+						<input type="text" th:field="*{username}" placeholder="UserName"
+								class="form-control" /> 
+						</div>
+					</div>
+
+					
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="password" th:field="*{password}"
+								placeholder="Password" class="form-control" /> <label
+								th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+								class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-primary btn-block">Register User</button>
+						</div>
+					</div>
+					
+					<span th:utext="${successMessage}"></span>
+					
+					
+				</form>
+			</div>
+		</div>
+
+            
+        <!-- End Content -->
+       </div>
+ </div>
+    </div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

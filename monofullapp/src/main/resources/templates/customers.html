@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div  class="container" >
+
+<div  class="row" >
+
+    <div th:replace="fragments/header::header"></div>
+    
+     <div  class="col-sm-1" >
+          <div class="verticalline"></div>
+        
+        </div>
+	
+	<div  class="col-sm-8" >
+	
+    <div class="container ">
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+              <a th:href="@{/logout}" class="nav-link">
+			                <i data-feather="box"></i> Déconnection
+			  </a>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Liste des clients</li>
+                    </ol>
+                </nav>
+                <h4 class="content-title">Liste des clients</h4>
+            </div>
+            <div class="d-none d-sm-flex">
+                <a th:href="@{/add-customer}" class="btn btn-brand-01 mg-l-5">
+                    <i data-feather="plus" class="svg-14"></i> Ajouter un client
+                </a>
+            </div>
+        </div>
+        <div class="content-body">
+
+            <div class="component-section" style="margin-top: 0px">
+                <table id="example1" class="table">
+                    <thead>
+                    <tr>
+                        <th class="wd-15p">Nom complet</th>
+                        <th class="wd-20p">Contact</th>
+                        <th class="wd-15p">Email</th>
+                        <th class="wd-35p">Localisation</th>
+                        <th class="wd-15p">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="customer: ${customers}">
+                        <td th:text="${customer.name}"/>
+                        <td th:text="${customer.phone}"/>
+                        <td th:text="${customer.email}"/>
+                        <td th:text="${customer.location}"/>
+                        <td>
+                            <a class="dropdown-item" th:href="@{/delete-customer/{id}(id=${customer.id})}">Supprimer le client</a>
+                            <!--div class="dropdown">
+                                <a href="#" class="link-gray-500" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical svg-16">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <circle cx="12" cy="5" r="1"></circle>
+                                        <circle cx="12" cy="19" r="1"></circle>
+                                    </svg>
+                                </a>
+                                <div class="dropdown-menu tx-14">
+                                    <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Options</h6>
+                                    <a class="dropdown-item" href="#">Modifier le client</a>
+                                    <a class="dropdown-item" href="#">Détail du client</a>
+                                    <a class="dropdown-item" th:href="@{/delete-customer/{id}(id=${customer.id})}">Supprimer le client</a>
+                                </div>
+                            </div-->
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <form action="#" th:action="@{/search-customer}" method="post">
+            <div style="margin: auto">
+                <div class="d-md-flex mg-b-30">
+                    <div class="form-group mg-b-0">
+                        <label>Nom complet du client: <span class="tx-danger">*</span></label>
+                        <input type="text" name="name" class="form-control" required style="width: 220px; margin-right: 10px" placeholder="Rechercher un client par nom">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark pd-x-20">Recherche le client</button>
+            </div>
+        </form>
+
+        <!-- End Content -->
+    </div>
+    </div>
+    </div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>

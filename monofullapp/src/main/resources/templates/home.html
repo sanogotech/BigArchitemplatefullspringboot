@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+   <div  class="container" >
+
+   <div  class="row" >
+        <div th:replace="fragments/header::header"></div>
+        <!-- End Bloc Menu principale -->
+        
+        <div  class="col-sm-1" >
+          <div class="verticalline"></div>
+        
+        </div>
+        
+        <div  class="col-sm-8" >
+		
+		
+    	
+
+        <div class="container">
+           
+            <!-- Start Header -->
+            <div class="header">
+                <div class="header-left">
+                    <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                    <div class="header-search">
+                        <i data-feather="search"></i>
+                        <input type="search" class="form-control" placeholder="What are you looking for?">
+                    </div>
+                </div>
+                
+                  <a th:href="@{/logout}" class="nav-link">
+			                <i data-feather="box"></i> Déconnection
+			            </a>
+        	</div>
+        	  <!-- End Header -->
+        	  
+        	  <div >
+        	       <h1>HOME BODY</h1>
+        	  
+        	  </div>
+        
+        </div>
+        
+        
+        </div>
+        </div>
+        </div>
+</body>
+</html>
