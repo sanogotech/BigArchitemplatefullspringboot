@@ -1,6 +1,9 @@
 package com.macrosoft.gestionboot.config;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -9,16 +12,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Configuration
@@ -34,6 +38,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private DataSource datasource;
+    
+    @Autowired
+	JdbcUserDetailsManager jdbcUserDetailsManager;
     
     
     @Value("${spring.queries.users-by-username-query}")
@@ -95,34 +102,35 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .dataSource(datasource)
                 .passwordEncoder(bCryptPasswordEncoder);
        
-       /*
+       
      
         //Use Spring Boots User detailsMAnager
-        JdbcUserDetailsManager userDetailsService = new JdbcUserDetailsManager();
+        //JdbcUserDetailsManager userDetailsService = new JdbcUserDetailsManager();
 
         //Set our Datasource to use the one defined in application.properties
-        userDetailsService.setDataSource(datasource);
+        jdbcUserDetailsManager.setDataSource(datasource);
         
       //add components
-        auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
-        auth.jdbcAuthentication().dataSource(datasource);
+        /*
+        auth.userDetailsService( jdbcUserDetailsManager).passwordEncoder(bCryptPasswordEncoder);
+        auth.jdbcAuthentication().dataSource(datasource);*/
 
         // add new user "user" with password "password" - password will be encrypted
-        if (!userDetailsService.userExists("admin")) {
+        if (! jdbcUserDetailsManager.userExists("admin")) {
         	
             List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
             authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
             User userDetails = new User("admin", bCryptPasswordEncoder.encode("admin2020"), authorities);
            
            
-            userDetailsService.createUser(userDetails );
+            jdbcUserDetailsManager.createUser(userDetails );
             
         	log.debug("configureGlobal method: createUser" +  userDetails.getUsername()); 
             
         
         
         }
-        */
+        
     }
 
   
@@ -140,6 +148,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public BCryptPasswordEncoder passwordEncoder() {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         return bCryptPasswordEncoder;
+    }
+    
+    @Bean
+    public   JdbcUserDetailsManager  jdbcUserDetailsManager() {
+    	 //Use Spring Boots User detailsMAnager
+        JdbcUserDetailsManager userDetailsService = new JdbcUserDetailsManager();
+      //Set our Datasource to use the one defined in application.properties
+       userDetailsService.setDataSource(datasource);
+        return  userDetailsService;
     }
 	
 

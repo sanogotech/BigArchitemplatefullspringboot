@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login PythonWebJava </title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="images/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="images/bg.svg">
+		</div>
+
+	
+		<div class="login-content">
+			<form  th:action="@{/login}"  method="post">
+				<img src="images/avatar.svg">
+				<h2 class="title">AKWABA PYTHON JAVA </h2>
+				
+				 <legend>Please Login</legend>
+                <div th:if="${param.error}" class="alert alert-error">    
+                    Invalid username and password.
+                </div>
+                <div th:if="${param.logout}" class="alert alert-success"> 
+                    You have been logged out.
+                </div>
+                
+				
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username </h5>
+           		   		 <br/>
+           		   		<input type="text" class="input" name="username">
+           		   </div>
+           	
+           	
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+				   
+				   <br/>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	 <br/>
+           		    	<input type="password" name="password" class="input">
+            	   </div>
+            	   
+				   <br/>
+				      
+				   <br/>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+
+				<br/>
+			<br/>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/mainlogin.js"></script>
+</body>
+</html>

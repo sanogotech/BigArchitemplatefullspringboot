@@ -6,6 +6,13 @@
 body {
     min-height: 100vh;
     background-attachment: fixed; }
+    
+    
+.verticalline {
+  border-left: 6px solid green;
+  height: 500px;
+}
+
 @media (min-width: 1281px) {
     body {
         font-size: 14px; } }

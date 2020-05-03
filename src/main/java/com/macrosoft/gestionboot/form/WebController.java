@@ -1,5 +1,7 @@
 package com.macrosoft.gestionboot.form;
 
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.macrosoft.gestionboot.model.Product;
-import com.macrosoft.gestionboot.service.ProductService;
-
-import javax.validation.Valid;
+import com.macrosoft.gestionboot.model.customer.Product;
+import com.macrosoft.gestionboot.service.customer.ProductService;
 
 /**
  * WebController est la classe qui permet de valider un formulaire
@@ -62,7 +62,7 @@ public class WebController implements WebMvcConfigurer {
 
         product.setDescription(productForm.getDescription());
 
-        productService.addProduct(product);
+        productService.save(product);
 
         return "redirect:/productresults";
     }

@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="css/mycustomstyle.css">
 </head>
 <body>
-    <div class="sidebar" th:fragment="header">
-        <div class="sidebar-header">
+    <div class="colsidebar col-sm-3" th:fragment="header">
+    
+        <div class="sidebar-header  ">
             <div>
-                <a href="" class="sidebar-logo"><span>GestionStocks</span></a>
+                <a href="/home" class="sidebar-logo"><span>GestionStocks</span></a>
                 <small class="sidebar-logo-headline">Application de gestion des stocks</small>
             </div>
         </div>
@@ -23,10 +24,17 @@
             <ul class="nav nav-sidebar">
                 <li class="nav-label"><label class="content-label">Menus principales</label></li>
                 <li class="nav-item">
-                    <a th:href="@{/}" class="nav-link">
-                        <i data-feather="box"></i> Liste des produits
+                    <a th:href="@{/registration}" class="nav-link">
+                        <i data-feather="box"></i> Liste des Comptes Users
                     </a>
                 </li>
+                
+                 <li class="nav-item">
+                    <a th:href="@{/crudindex}" class="nav-link">
+                        <i data-feather="box"></i> Liste des Produits
+                    </a>
+                </li>
+                
                 <li class="nav-item">
                     <a th:href="@{/customers}" class="nav-link">
                         <i data-feather="box"></i> Liste des clients
@@ -44,8 +52,10 @@
                 </li-->
             </ul>
         </div>
+        
     </div>
-
+    
+  
     <div th:fragment="footerscript">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

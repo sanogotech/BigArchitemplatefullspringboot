@@ -6,6 +6,7 @@ Cette application est un exemple de base avec spring boot.
 
 ## Doc URL
 
+  * https://search.maven.org/search
   * https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
   * [Site officiel spring](https://spring.io/guides)
   * http://myjavablog.com/2018/12/29/spring-boot-spring-security-h2-database/
@@ -21,6 +22,10 @@ Cette application est un exemple de base avec spring boot.
   * https://www.javainuse.com/spring/boot-jwt-mysql
   * https://www.javainuse.com/devOps/docker/docker-war
   * https://www.javainuse.com/spring/sprsec
+  
+##  TOP  Chrome Plugin
+ - CSSViewer ,  UserSnap  Screenshot Dev,ServiState HTTP, Selenium IDE, BlazeMeter, Talend API Tester Free Edition (Test Suite + Assert Response), ColorPick
+
   
 ## Installation 
 

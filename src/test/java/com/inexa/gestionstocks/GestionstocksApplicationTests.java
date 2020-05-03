@@ -1,17 +1,15 @@
 package com.inexa.gestionstocks;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.macrosoft.gestionboot.form.CustomerForm;
-import com.macrosoft.gestionboot.model.Customer;
-import com.macrosoft.gestionboot.service.CustomerService;
-
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import com.macrosoft.gestionboot.model.customer.Customer;
+import com.macrosoft.gestionboot.service.customer.CustomerService;
 
 @SpringBootTest
 class GestionstocksApplicationTests {

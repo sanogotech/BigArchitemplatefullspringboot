@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head th:include="fragments/header :: head(title='SB Admin 2 - Forms')">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Upload File</title>
+</head>
+
+<body>
+
+
+<div id="wrapper">
+
+	<div th:replace="fragments/header :: header">&nbsp;</div>
+	
+	  <div  class="col-sm-1" >
+          <div class="verticalline"></div>
+        
+        </div>
+
+		<div id="page-wrapper">
+		
+				<div class="topnav">
+					  <a class="active" href="#home">Home</a>
+					  <a href="#about">About</a>
+					  <a href="#contact">Contact</a>
+					  <div class="search-container">
+					    <form action="/searchbyname">
+					      <input type="text" placeholder="Search..by ..name" name="searchTerm">
+					      <button type="submit"><i class="fa fa-search"></i></button>
+					    </form>
+					  </div>
+				</div>
+				
+					<div align="center">
+					
+					<br/> 
+					<br/> 
+					
+					<h1>Spring Boot file upload example</h1>
+					
+					  <br/>
+					  <br/>  
+					  
+					  <!-- https://www.thymeleaf.org/doc/articles/springsecurity.html -->
+
+						<form method="post"  action="#" th:action="@{/upload}" enctype="multipart/form-data">
+						
+						    <input type="file" name="file" /><br/><br/>
+						    <input type="submit" value="Submit" />
+						</form>
+					
+					</div>  
+	</div>
+		<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+
+
+</body>
+</html>

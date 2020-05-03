@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::headerlink"></head>
+<body>
+<div  class="container" >
+
+<div  class="row" >
+    <div th:replace="fragments/header::header"></div>
+    
+     <div  class="col-sm-1" >
+          <div class="verticalline"></div>
+        
+        </div>
+    
+    <div  class="col-sm-8" >
+
+    <div class="container">
+    
+    	<!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        
+        <!-- Start Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+                <div class="header-search">
+                    <i data-feather="search"></i>
+                    <input type="search" class="form-control" placeholder="What are you looking for?">
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Content -->
+        <div class="content-header justify-content-between">
+        </div>
+        <div class="content-body">
+
+            
+            <table  class="table table-hover">
+					  <!--   <table border="1" cellpadding="10"> -->
+					        <thead>
+					            <tr>
+					                <th>Nom du client</th>
+					                <th>Contact du client</th>
+					                <th>Email du client</th>
+					                <th>Localisation du client</th>
+					            </tr>
+					        </thead>
+					        <tbody>
+					            <tr th:each="customer : ${listCustomers}">
+					            	<td th:text="${customer.name}">Nom du client</td>
+					                <td th:text="${customer.phone}">Phone </td>
+					                <td th:text="${customer.email}">Email</td>
+					                <td th:text="${customer.location}">Localisation</td>
+					                <td>
+					                	<a th:href="@{'/customeredit/' + ${customer.id}}" class="btn btn-success custom-width">Edit</a>
+					                	&nbsp;&nbsp;&nbsp;
+					                	<a th:href="@{'/customerdelete/' + ${customer.id}}"  class="btn btn-danger custom-width">Delete</a>
+					                </td>
+					            </tr>
+					        </tbody>
+					    </table>
+
+            <div th:unless="${result}"> Not found </div>
+
+        </div>
+        <!-- End Content -->
+    </div>
+</div>
+</div>
+</div>
+<div th:replace="fragments/header::footerscript"></div>
+</body>
+</html>
