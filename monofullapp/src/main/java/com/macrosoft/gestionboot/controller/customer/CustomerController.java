@@ -26,7 +26,7 @@ public class CustomerController implements WebMvcConfigurer {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private CustomerService defaultService;
+    private CustomerService customerService;
     /*
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -42,7 +42,7 @@ public class CustomerController implements WebMvcConfigurer {
     @GetMapping("/customers")
     public String listCustomer(Model model)
     {
-        model.addAttribute("customers", defaultService.listCustomer());
+        model.addAttribute("customers", customerService.listCustomer());
 
         return "customers";
     }
@@ -70,7 +70,7 @@ public class CustomerController implements WebMvcConfigurer {
 
         customer.setLocation(customerForm.getLocation());
 
-        defaultService.addCustomer(customer);
+        customerService.addCustomer(customer);
 
         return "redirect:/customers";
     }
@@ -78,7 +78,7 @@ public class CustomerController implements WebMvcConfigurer {
     @GetMapping("/delete-customer/{id}")
     public String deleteCustomer(@PathVariable("id") long id, Model model)
     {
-        defaultService.deleteById(id);
+    	customerService.deleteById(id);
 
         return "redirect:/customers";
     }
@@ -92,7 +92,7 @@ public class CustomerController implements WebMvcConfigurer {
     @PostMapping("/search-customer")
     public String searchCustomer(String name, Model model) {
 
-    	   List<Customer> customers = defaultService.findByName(name);
+    	   List<Customer> customers = customerService.findByName(name);
 
         model.addAttribute("listCustomers", customers);
 

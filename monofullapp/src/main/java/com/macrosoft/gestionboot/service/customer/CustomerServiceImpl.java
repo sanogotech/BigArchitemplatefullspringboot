@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.macrosoft.gestionboot.model.customer.Customer;
 import com.macrosoft.gestionboot.repository.customer.CustomerRepository;
 
-@Service("defaultService")
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService{
 
     @Autowired

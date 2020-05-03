@@ -6012,3 +6012,112 @@ CREATE TABLE users (
 2020-05-03 15:25:09.792  INFO 5584 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-05-03 15:25:09.799  INFO 5584 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-05-03 15:25:09.808  INFO 5584 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-03 15:47:22.894  INFO 16016 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : Starting GestionBootApplication on DESKTOP-OR1MPIC with PID 16016 (C:\MACROSOFT\githubsanogotech\BigArchitemplatefullspringboot\monofullapp\target\classes started by User in C:\MACROSOFT\githubsanogotech\BigArchitemplatefullspringboot\monofullapp)
+2020-05-03 15:47:22.929 DEBUG 16016 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-03 15:47:22.931  INFO 16016 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : The following profiles are active: dev
+2020-05-03 15:47:23.076  INFO 16016 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\User\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-03 15:47:23.079  INFO 16016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-03 15:47:23.083  INFO 16016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-03 15:47:24.797  INFO 16016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-03 15:47:25.187  INFO 16016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 369ms. Found 7 JPA repository interfaces.
+2020-05-03 15:47:27.766  INFO 16016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-03 15:47:27.797  INFO 16016 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 15:47:27.798  INFO 16016 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 15:47:27.998  INFO 16016 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 15:47:28.000  INFO 16016 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4916 ms
+2020-05-03 15:47:28.139  INFO 16016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-03 15:47:28.545  INFO 16016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-03 15:47:28.562  INFO 16016 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2web'. Database available at 'jdbc:h2:~/gestionmanager'
+2020-05-03 15:47:29.108  INFO 16016 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-05-03 15:47:29.130  INFO 16016 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:~/gestionmanager (H2 1.4)
+2020-05-03 15:47:29.411  WARN 16016 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-05-03 15:47:29.631  INFO 16016 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.162s)
+2020-05-03 15:47:29.665  INFO 16016 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+2020-05-03 15:47:29.671  INFO 16016 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2020-05-03 15:47:29.871  INFO 16016 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 15:47:30.011  INFO 16016 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-03 15:47:30.246  INFO 16016 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 15:47:30.473  INFO 16016 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 15:47:33.844  INFO 16016 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 15:47:33.870  INFO 16016 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 15:47:33.918  INFO 16016 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-03 15:47:35.193  WARN 16016 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 15:47:35.810  INFO 16016 --- [restartedMain] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2020-05-03 15:47:35.881  INFO 16016 --- [restartedMain] yConfig$$EnhancerBySpringCGLIB$$ce513b34 : Start Spring Security  configure method:
+2020-05-03 15:47:35.884 DEBUG 16016 --- [restartedMain] yConfig$$EnhancerBySpringCGLIB$$ce513b34 : *** usesQuery login ***: SELECT username, password, enabled from users where username = ?
+2020-05-03 15:47:35.887 DEBUG 16016 --- [restartedMain] yConfig$$EnhancerBySpringCGLIB$$ce513b34 : *** authoritiesQuery login ***: SELECT u.username, a.authority FROM authorities a, users u WHERE u.username =?  AND u.username = a.username
+2020-05-03 15:47:36.741  WARN 16016 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-05-03 15:47:36.742  WARN 16016 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-05-03 15:47:36.746  WARN 16016 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-05-03 15:47:36.895  INFO 16016 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2020-05-03 15:47:36.896  INFO 16016 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2020-05-03 15:47:36.897  INFO 16016 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2020-05-03 15:47:36.900  INFO 16016 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2020-05-03 15:47:37.114  INFO 16016 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ab61d08, org.springframework.security.web.context.SecurityContextPersistenceFilter@49ffeeb2, org.springframework.security.web.header.HeaderWriterFilter@3924c869, org.springframework.security.web.csrf.CsrfFilter@49a64b92, org.springframework.security.web.authentication.logout.LogoutFilter@33c74bf7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b147cdb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@da31cc2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1086b257, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@727f00d4, org.springframework.security.web.session.SessionManagementFilter@64356fbd, org.springframework.security.web.access.ExceptionTranslationFilter@65f17df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a422766]
+2020-05-03 15:47:37.471  INFO 16016 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 15:47:37.700  INFO 16016 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-03 15:47:39.041  INFO 16016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-03 15:47:39.269  INFO 16016 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : Started GestionBootApplication in 17.395 seconds (JVM running for 18.342)
+2020-05-03 15:52:40.283  INFO 16016 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 15:52:40.291  INFO 16016 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 15:52:40.302  INFO 16016 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-03 15:52:40.310  INFO 16016 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-03 15:53:23.464  INFO 11872 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : Starting GestionBootApplication on DESKTOP-OR1MPIC with PID 11872 (C:\MACROSOFT\githubsanogotech\BigArchitemplatefullspringboot\monofullapp\target\classes started by User in C:\MACROSOFT\githubsanogotech\BigArchitemplatefullspringboot\monofullapp)
+2020-05-03 15:53:23.473 DEBUG 11872 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-03 15:53:23.476  INFO 11872 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : The following profiles are active: dev
+2020-05-03 15:53:23.579  INFO 11872 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\User\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-03 15:53:23.581  INFO 11872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-03 15:53:23.586  INFO 11872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-03 15:53:25.326  INFO 11872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-03 15:53:25.585  INFO 11872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 224ms. Found 7 JPA repository interfaces.
+2020-05-03 15:53:28.349  INFO 11872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-03 15:53:28.371  INFO 11872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 15:53:28.376  INFO 11872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 15:53:28.544  INFO 11872 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 15:53:28.545  INFO 11872 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4957 ms
+2020-05-03 15:53:28.694  INFO 11872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-03 15:53:29.064  INFO 11872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-03 15:53:29.078  INFO 11872 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2web'. Database available at 'jdbc:h2:~/gestionmanager'
+2020-05-03 15:53:29.438  INFO 11872 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-05-03 15:53:29.463  INFO 11872 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:~/gestionmanager (H2 1.4)
+2020-05-03 15:53:29.562  WARN 11872 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-05-03 15:53:29.753  INFO 11872 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.055s)
+2020-05-03 15:53:29.786  INFO 11872 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+2020-05-03 15:53:29.794  INFO 11872 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2020-05-03 15:53:30.023  INFO 11872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 15:53:30.115  INFO 11872 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-03 15:53:30.295  INFO 11872 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 15:53:30.469  INFO 11872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-03 15:53:32.480  INFO 11872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 15:53:32.500  INFO 11872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 15:53:32.544  INFO 11872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-03 15:53:33.604  WARN 11872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 15:53:34.185  INFO 11872 --- [restartedMain] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2020-05-03 15:53:34.245  INFO 11872 --- [restartedMain] yConfig$$EnhancerBySpringCGLIB$$13730b00 : Start Spring Security  configure method:
+2020-05-03 15:53:34.250 DEBUG 11872 --- [restartedMain] yConfig$$EnhancerBySpringCGLIB$$13730b00 : *** usesQuery login ***: SELECT username, password, enabled from users where username = ?
+2020-05-03 15:53:34.251 DEBUG 11872 --- [restartedMain] yConfig$$EnhancerBySpringCGLIB$$13730b00 : *** authoritiesQuery login ***: SELECT u.username, a.authority FROM authorities a, users u WHERE u.username =?  AND u.username = a.username
+2020-05-03 15:53:34.851  WARN 11872 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-05-03 15:53:34.852  WARN 11872 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-05-03 15:53:34.856  WARN 11872 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-05-03 15:53:34.986  INFO 11872 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2020-05-03 15:53:34.987  INFO 11872 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2020-05-03 15:53:34.992  INFO 11872 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2020-05-03 15:53:34.993  INFO 11872 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2020-05-03 15:53:35.172  INFO 11872 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fae0cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@418e91b0, org.springframework.security.web.header.HeaderWriterFilter@b0cf9b4, org.springframework.security.web.csrf.CsrfFilter@29469fdb, org.springframework.security.web.authentication.logout.LogoutFilter@16a5abec, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@134cda47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c9f89ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fed7795, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72e21e61, org.springframework.security.web.session.SessionManagementFilter@6933ac3b, org.springframework.security.web.access.ExceptionTranslationFilter@188397f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32b10618]
+2020-05-03 15:53:35.578  INFO 11872 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 15:53:35.766  INFO 11872 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-03 15:53:37.039  INFO 11872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-03 15:53:37.050  INFO 11872 --- [restartedMain] c.m.gestionboot.GestionBootApplication   : Started GestionBootApplication in 14.523 seconds (JVM running for 15.476)
+2020-05-03 15:54:33.428  INFO 11872 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 15:54:33.430  INFO 11872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-03 15:54:33.512  INFO 11872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 80 ms
+2020-05-03 15:54:38.153 DEBUG 11872 --- [http-nio-8080-exec-4] c.m.g.c.customer.HomeController          : Principal admin
+2020-05-03 15:54:38.154 DEBUG 11872 --- [http-nio-8080-exec-4] c.m.g.c.customer.HomeController          : *** Username :admin
+2020-05-03 15:54:38.165 DEBUG 11872 --- [http-nio-8080-exec-4] c.m.g.c.customer.HomeController          : *** UserDetails From DB Password :$2a$10$2WAMYL9oxCBDB1eh5XZS3.DO3AlxH0AN1Nmuu3wJylMbEA5AED1v.
+2020-05-03 15:54:41.008 DEBUG 11872 --- [http-nio-8080-exec-5] c.m.g.c.customer.HomeController          : Principal admin
+2020-05-03 15:54:41.010 DEBUG 11872 --- [http-nio-8080-exec-5] c.m.g.c.customer.HomeController          : *** Username :admin
+2020-05-03 15:54:41.015 DEBUG 11872 --- [http-nio-8080-exec-5] c.m.g.c.customer.HomeController          : *** UserDetails From DB Password :$2a$10$2WAMYL9oxCBDB1eh5XZS3.DO3AlxH0AN1Nmuu3wJylMbEA5AED1v.
+2020-05-03 15:55:22.791  INFO 11872 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-03 15:55:22.797  INFO 11872 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 15:55:22.803  INFO 11872 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-03 15:55:22.813  INFO 11872 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
