@@ -1,5 +1,6 @@
 package com.macrosoft.gestionboot.model.employee;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
@@ -20,13 +21,13 @@ import javax.persistence.OneToMany;
  * @author User
  */
 @Entity
-public class Employee {
+public class Employee implements Serializable{
 	
 	@Id
 	@GeneratedValue
 	//Default
 	// @GeneratedValue(strategy=AUTO)
-	private Long  idEmployee;
+	private Long  id;
 	
 	private String firstName;
 	
@@ -92,6 +93,15 @@ LocalDateTime localTimeObj1 = LocalDateTime.parse(time1, formatter);
 	 */
 	public Employee() {
 		super();
+	}
+
+	
+
+	public Employee(Long id, String firstName, String lastName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 
 
@@ -174,6 +184,25 @@ LocalDateTime localTimeObj1 = LocalDateTime.parse(time1, formatter);
 
 	public void setJobs(Set<Job> jobs) {
 		this.jobs = jobs;
+	}
+
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 	
 	
