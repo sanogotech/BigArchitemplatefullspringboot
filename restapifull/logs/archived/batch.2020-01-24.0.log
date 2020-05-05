@@ -1,0 +1,7 @@
+2020-01-24 16:33:04,670 INFO com.oc.api.ApiApplication [main] Starting ApiApplication on DESKTOP-2BSICML with PID 13236 (C:\Users\Charles\Documents\Dev\OC-Bibliotheque\api\target\classes started by Charles in c:\Users\Charles\Documents\Dev\OC-Bibliotheque)
+2020-01-24 16:33:04,678 DEBUG com.oc.api.ApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-24 16:33:04,678 INFO com.oc.api.ApiApplication [main] No active profile set, falling back to default profiles: default
+2020-01-24 16:33:09,945 DEBUG com.oc.api.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$78649366 [main] Set Swagger2 documentation
+2020-01-24 16:33:10,512 INFO com.oc.api.ApiApplication [main] Started ApiApplication in 6.179 seconds (JVM running for 6.807)
+2020-01-24 16:35:30,454 INFO com.oc.api.web.controllers.BorrowController [http-nio-9001-exec-1] Providing borrow resource from database: all borrow list
+2020-01-24 16:54:00,115 INFO com.oc.api.web.controllers.BorrowController [http-nio-9001-exec-3] Providing borrow resource from database: all borrow list

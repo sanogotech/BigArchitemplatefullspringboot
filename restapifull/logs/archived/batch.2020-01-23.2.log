@@ -1,0 +1,23 @@
+2020-01-23 16:32:40,299 INFO com.oc.webapp.WebappApplication [main] No active profile set, falling back to default profiles: default
+2020-01-23 16:32:41,587 DEBUG com.oc.webapp.WebappApplication$1 [main] Code archive: C:\env\maven\repository\org\springframework\boot\spring-boot\2.2.2.RELEASE\spring-boot-2.2.2.RELEASE.jar
+2020-01-23 16:32:41,588 DEBUG com.oc.webapp.WebappApplication$1 [main] Code archive: C:\env\maven\repository\org\springframework\boot\spring-boot\2.2.2.RELEASE\spring-boot-2.2.2.RELEASE.jar
+2020-01-23 16:32:41,588 DEBUG com.oc.webapp.WebappApplication$1 [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2020-01-23 16:32:43,744 INFO com.oc.webapp.WebappApplication [main] Started WebappApplication in 4.609 seconds (JVM running for 5.169)
+2020-01-23 16:33:17,136 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-7] Reach url: / - GET
+2020-01-23 16:33:22,550 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-10] Reach url: /books - GET
+2020-01-23 16:33:26,132 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-9] Reach url: /connexion - GET
+2020-01-23 16:33:40,144 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-2] Reach url: / - GET
+2020-01-23 16:33:41,774 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-8] Reach url: /profile - GET
+2020-01-23 16:33:41,775 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-8] Getting active borrows for current authenticated user
+2020-01-23 16:33:41,775 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-8] Getting authenticated current user id
+2020-01-23 16:33:53,091 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-7] Reach url: /profile - POST
+2020-01-23 16:33:53,091 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-7] Extending Borrow bean duration
+2020-01-23 16:33:53,396 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-1] Reach url: /profile - GET
+2020-01-23 16:33:53,396 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-1] Getting active borrows for current authenticated user
+2020-01-23 16:33:53,396 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-1] Getting authenticated current user id
+2020-01-23 16:34:05,052 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-9] Reach url: /profile - POST
+2020-01-23 16:34:05,052 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-9] Extending Borrow bean duration
+2020-01-23 16:34:05,206 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-10] Reach url: /profile - GET
+2020-01-23 16:34:05,207 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-10] Getting active borrows for current authenticated user
+2020-01-23 16:34:05,207 DEBUG com.oc.webapp.service.impl.WebappServiceImpl [https-jsse-nio-9002-exec-10] Getting authenticated current user id
+2020-01-23 16:39:21,717 INFO com.oc.webapp.web.controllers.WebappController [https-jsse-nio-9002-exec-10] Reach url: /books - GET

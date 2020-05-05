@@ -1,0 +1,41 @@
+xmlns:th="http://www.thymeleaf.org"
+<header th:fragment="header" class="mb-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+      <img src="oc_logo_mini.jpg" class="rounded" alt="" />
+    </a>
+    <a class="navbar-brand" href="/">OC-Bibliothèque</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <p sec:authentication="name" sec:authorize="isAuthenticated()" class="d-lg-none my-2 text-light">
+          Name
+        </p>
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2 mr-2 my-lg-auto">
+          <a class="nav-link py-0" href="/profile">Mes prêts</a>
+        </li>
+      </ul>
+      <form action="/" class="form-inline col-lg-5 col-xl-6 mr-auto px-0" method="GET">
+        <input class="form-control col-12 col-lg-7 col-xl-8 mb-2 mr-sm-2 mb-lg-0" type="text" name="query" placeholder="Titre, auteur,..."
+          aria-label="Search" />
+        <button class="btn btn-outline-info mb-2 mr-2 mb-lg-0" type="submit">
+          Rechercher
+        </button>
+      </form>
+      <form class="form-inline my-lg-0" form-method="post" th:action="@{/logout}">
+        <p sec:authentication="name" sec:authorize="isAuthenticated()" class="d-none d-lg-block my-auto mr-2 text-light">
+          Name
+        </p>
+        <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger mb-2 mb-lg-0" type="submit">
+          Déconnexion
+        </button>
+      </form>
+      <div><a sec:authorize="isAnonymous()" class="btn btn-outline-info mr-2 mb-2 mb-lg-0" href="/connexion" role="button">Connexion</a></div>
+      <!-- <div><a sec:authorize="isAnonymous()" class="btn btn-outline-info" href="/registration" role="button">S'inscrire</a></div> -->
+    </div>
+  </nav>
+</header>

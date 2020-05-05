@@ -13,8 +13,15 @@ Cette application est un exemple de base avec spring boot.
   * https://www.javainuse.com/spring/boot_security_jdbc_authentication_program
   * https://github.com/hendisantika/spring-boot-adminlte/blob/
   * [Autre plateforme d'apprentissage](https://baeldung.com)
+  * https://github.com/sanogotech/hellokoding-courses/tree/master/springboot-examples/springboot-flyway
+  * https://github.com/sanogotech/hellokoding-courses/tree/master/
   *https://www.baeldung.com/spring-jpa-like-queries
   *https://www.baeldung.com/hibernate-one-to-many
+  * https://howtodoinjava.com/
+  * https://github.com/sanogotech/hellokoding-courses/tree/master/springboot-examples/springboot-flyway
+  * https://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/
+  * geeksforgeeks.org
+  * sololearn.com
   * https://netsurfingzone.com/hibernate/one-to-many-mapping-annotation-example-in-hibernate-jpa-using-spring-boot-and-oracle/
   * https://github.com/sanogotech/angular7-spring-boot.git
   * https://www.javainuse.com/spring/boot-websocket-chat

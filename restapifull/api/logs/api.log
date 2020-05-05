@@ -1,0 +1,5 @@
+2020-02-07 11:14:22,664 INFO com.oc.api.DemoApplicationTests [main] Starting DemoApplicationTests on DESKTOP-2BSICML with PID 20180 (started by Charles in C:\Users\Charles\Documents\Dev\OC-Bibliotheque\api)
+2020-02-07 11:14:22,666 DEBUG com.oc.api.DemoApplicationTests [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-02-07 11:14:22,667 INFO com.oc.api.DemoApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-07 11:14:28,217 DEBUG com.oc.api.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$34a77d54 [main] Set Swagger2 documentation
+2020-02-07 11:14:29,176 INFO com.oc.api.DemoApplicationTests [main] Started DemoApplicationTests in 6.75 seconds (JVM running for 7.769)

@@ -1,0 +1,16 @@
+
+1. Verbes Pluriel +  Get/Post/Put/Patch/Delete
+
+2. ResponseEntity + Status Code + Exception
+
+3.  Jsonignore one  mappeby  JPA Relation
+
+4.  Location vs Data !
+
+4.  api/v1  
+
+5.  Hal  Doc  vs  HATEOS CODE !
+
+6.  JWT /Basic Auth
+
+7.

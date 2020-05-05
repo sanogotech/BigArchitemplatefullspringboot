@@ -1,0 +1,26 @@
+2020-01-22 15:10:06,220 INFO com.oc.api.ApiApplication [main] Starting ApiApplication on DESKTOP-2BSICML with PID 7780 (C:\Users\Charles\Documents\Dev\OC-Bibliotheque\api\target\classes started by Charles in c:\Users\Charles\Documents\Dev\OC-Bibliotheque)
+2020-01-22 15:10:06,223 DEBUG com.oc.api.ApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-22 15:10:06,224 INFO com.oc.api.ApiApplication [main] No active profile set, falling back to default profiles: default
+2020-01-22 15:10:11,332 DEBUG com.oc.api.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$d7a3b116 [main] Set Swagger2 documentation
+2020-01-22 15:10:11,953 INFO com.oc.api.ApiApplication [main] Started ApiApplication in 6.055 seconds (JVM running for 6.633)
+2020-01-22 15:25:06,240 INFO com.oc.api.ApiApplication [main] Starting ApiApplication on DESKTOP-2BSICML with PID 15420 (C:\Users\Charles\Documents\Dev\OC-Bibliotheque\api\target\classes started by Charles in c:\Users\Charles\Documents\Dev\OC-Bibliotheque)
+2020-01-22 15:25:06,243 DEBUG com.oc.api.ApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-22 15:25:06,244 INFO com.oc.api.ApiApplication [main] No active profile set, falling back to default profiles: default
+2020-01-22 15:25:11,320 DEBUG com.oc.api.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$8e647bfd [main] Set Swagger2 documentation
+2020-01-22 15:25:11,899 INFO com.oc.api.ApiApplication [main] Started ApiApplication in 5.961 seconds (JVM running for 6.516)
+2020-01-22 15:26:21,131 INFO com.oc.api.web.controllers.BookController [http-nio-9001-exec-1] Providing book resource from database: all book list
+2020-01-22 15:26:21,319 DEBUG com.oc.api.web.controllers.BookController [http-nio-9001-exec-1] Splitting query, query: 
+2020-01-22 15:26:21,595 INFO com.oc.api.web.controllers.AvailableCopieController [http-nio-9001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2020-01-22 15:26:37,418 INFO com.oc.api.web.controllers.RegisteredUserController [http-nio-9001-exec-5] Search user by email: user@test.fr
+2020-01-22 15:29:55,280 INFO com.oc.api.ApiApplication [main] Starting ApiApplication on DESKTOP-2BSICML with PID 19928 (C:\Users\Charles\Documents\Dev\OC-Bibliotheque\api\target\classes started by Charles in c:\Users\Charles\Documents\Dev\OC-Bibliotheque)
+2020-01-22 15:29:55,283 DEBUG com.oc.api.ApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-22 15:29:55,284 INFO com.oc.api.ApiApplication [main] No active profile set, falling back to default profiles: default
+2020-01-22 15:30:00,463 DEBUG com.oc.api.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$d54443e6 [main] Set Swagger2 documentation
+2020-01-22 15:30:01,015 INFO com.oc.api.ApiApplication [main] Started ApiApplication in 6.071 seconds (JVM running for 6.655)
+2020-01-22 15:32:28,268 INFO com.oc.api.web.controllers.RegisteredUserController [http-nio-9001-exec-2] Search user by email: user@test.fr
+2020-01-22 15:32:58,561 INFO com.oc.api.web.controllers.RegisteredUserController [http-nio-9001-exec-4] Search user by email: user@test.fr
+2020-01-22 15:33:09,669 INFO com.oc.api.web.controllers.RegisteredUserController [http-nio-9001-exec-6] Search user by email: user@test.fr
+2020-01-22 17:01:16,246 INFO com.oc.api.web.controllers.BookController [http-nio-9001-exec-10] Providing book resource from database: all book list
+2020-01-22 17:01:16,311 DEBUG com.oc.api.web.controllers.BookController [http-nio-9001-exec-10] Splitting query, query: 
+2020-01-22 17:01:16,467 INFO com.oc.api.web.controllers.AvailableCopieController [http-nio-9001-exec-1] Providing availablecopie resource from database: all availablecopie list
+2020-01-22 17:12:02,653 INFO com.oc.api.web.controllers.RegisteredUserController [http-nio-9001-exec-3] Search user by email: user@test.com

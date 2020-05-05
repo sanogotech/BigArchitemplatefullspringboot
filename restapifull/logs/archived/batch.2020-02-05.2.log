@@ -1,0 +1,4 @@
+2020-02-05 11:55:08,310 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-05 11:55:11,032 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 3.977 seconds (JVM running for 4.715)
+2020-02-05 12:02:15,734 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-05 12:02:18,554 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 3.97 seconds (JVM running for 4.757)

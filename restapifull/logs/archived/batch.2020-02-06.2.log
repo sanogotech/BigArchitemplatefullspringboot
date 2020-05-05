@@ -1,0 +1,10 @@
+2020-02-06 09:53:38,902 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-06 09:53:41,838 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 3.997 seconds (JVM running for 4.625)
+2020-02-06 09:54:00,007 INFO com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Sending emails for late borrows
+2020-02-06 09:54:00,184 DEBUG com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for late borrow, id:1
+2020-02-06 10:41:28,735 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-06 10:41:31,286 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 3.67 seconds (JVM running for 4.286)
+2020-02-06 10:45:13,567 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-06 10:45:16,467 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 4.077 seconds (JVM running for 4.606)
+2020-02-06 10:45:30,001 INFO com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Sending emails for late borrows
+2020-02-06 10:45:30,211 DEBUG com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for late borrow, id:1

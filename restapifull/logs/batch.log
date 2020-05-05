@@ -1,0 +1,44 @@
+2020-02-10 14:31:20,298 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-10 14:31:22,182 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'emailServiceImpl' defined in file [C:\Users\Charles\Documents\Dev\OC-Bibliotheque-Livraison\batch\target\classes\com\oc\batch\service\impl\EmailServiceImpl.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMailForLateBorrowsEveryDay': For input string: "1()"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.oc.batch.BatchApplication.main(BatchApplication.java:12)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sendMailForLateBorrowsEveryDay': For input string: "1()"
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:499)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:362)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:362)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+2020-02-10 14:31:41,538 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-10 14:31:44,098 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 3.784 seconds (JVM running for 4.426)
+2020-02-10 14:36:15,974 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-10 14:36:18,675 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 3.971 seconds (JVM running for 4.569)
+2020-02-10 14:36:30,002 INFO com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Sending emails for late borrows
+2020-02-10 14:36:30,197 DEBUG com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for late borrow, id:1
+2020-02-10 16:46:39,924 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-10 16:46:43,062 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 4.375 seconds (JVM running for 4.956)
+2020-02-10 16:47:00,001 INFO com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Sending emails for late borrows
+2020-02-10 16:47:00,180 DEBUG com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for late borrow, id:1
+2020-02-10 17:21:10,544 INFO com.oc.batch.BatchApplication [main] No active profile set, falling back to default profiles: default
+2020-02-10 17:21:14,608 INFO com.oc.batch.BatchApplication [main] Started BatchApplication in 5.824 seconds (JVM running for 6.827)
+2020-02-10 17:21:30,003 INFO com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Sending emails for late borrows
+2020-02-10 17:21:30,196 DEBUG com.oc.batch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for late borrow, id:1
